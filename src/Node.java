@@ -4,7 +4,7 @@ public class Node {
     int pointNext;
     int size;
 
-    //Node(){}
+    //Node(){} constructor
     Node(){
         this.value = 0;
         this.pointNext = 0;
