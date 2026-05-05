@@ -12,7 +12,19 @@ public class MatrixAddition {
 
             String line;
             while ((line = reader.readLine()) != null){
-                System.out.println(line);
+                //System.out.println(line);
+
+                //split matrix by ;
+                String[] array = line.split(";");
+
+                for(int i = 0;i < array.length ; i ++){
+                    //spilt that part of matrix by , so we get rows and cols
+                    String[] rows = line.split(",");
+
+                    //initialise the 2D array now
+                    int[][] matrix = new int[rows.length][];
+                }
+
             }
             reader.close();
         } catch (IOException e) {
