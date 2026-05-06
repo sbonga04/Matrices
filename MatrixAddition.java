@@ -14,15 +14,22 @@ public class MatrixAddition {
             while ((line = reader.readLine()) != null){
                 //System.out.println(line);
 
-                //split matrix by ;
+                //split matrix by (;)
                 String[] array = line.split(";");
 
                 for(int i = 0;i < array.length ; i ++){
-                    //spilt that part of matrix by , so we get rows and cols
+                    //spilt that part of matrix by (,) so we get rows and cols
                     String[] rows = line.split(",");
 
                     //initialise the 2D array now
                     int[][] matrix = new int[rows.length][];
+
+                    for(int r = 0; r< rows.length; r ++){
+                        //now i want to clean the rows
+                        //trim is gonna replace spaces
+                        rows[r] = rows[r].trim().replace("\\s+"," ");
+                        //continue next time....commit for now
+                    }
                 }
 
             }
