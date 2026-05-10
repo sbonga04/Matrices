@@ -15,7 +15,20 @@ public class MatrixAdditionExample {
         for(int i = 0; i < line.length(); i ++){
             String[] row = matrix[i].split(",");
 
-            int[][] AorB = new int[row.length][];
+            int[][] AorB = new int[row.length][]; //use later
+
+            for(int r = 0; r<row.length ; i++){
+
+                row[r] = row[r].trim().replace("\\s+" , " ");
+
+                String[] nums = row[r].split(" ");
+                }
+
         }
+    }
+    public int[][] matrix_addition(int [][]A,int[][] B){
+        //trying to add 2 matrices
+
+        return B;
     }
 }
