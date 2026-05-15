@@ -10,18 +10,24 @@ public class MatrixAdditionExample {
         String line = "3 2 5, 4 5 1, 6 3 1; 2 3 1, 3 4 1, 2 1 2";
 
         //splitting matrix itself now to A and B
-        String[] matrix = line.split(";");
+        String[] arr = line.split(";");
         //
-        for(int i = 0; i < line.length(); i ++){
-            String[] row = matrix[i].split(",");
+        for(int string = 0; string < line.length(); string ++){
+            String[] row = arr[string].split(",");
 
-            int[][] AorB = new int[row.length][]; //use later
+            int[][] matrix = new int[row.length][]; //use later.. just after the for loop
 
-            for(int r = 0; r<row.length ; i++){
+            for(int r = 0; r<row.length ; r++){
 
                 row[r] = row[r].trim().replace("\\s+" , " ");
 
                 String[] nums = row[r].split(" ");
+
+                matrix[r] = new int[nums.length]; //evaluate this line ...later
+
+                //converting each string into an interger now
+                for(int c = 0; c < nums.length ; c ++)
+                    matrix[r][c] = Integer.parseInt(nums[c]); //getting back on this line again, took this from AI, some advanced stuff
                 }
 
         }
