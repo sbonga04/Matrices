@@ -25,7 +25,10 @@ public class array2D {
             for (int col = 0; col<matrix[row].length; col ++){
                 sum = matrix[row][col] + sum;
             }
-            System.out.println("The sum is: " + sum);
+            if sum > 20
+                System.out.println("The sum is > 20: " + sum);
+            else
+                System.out.println("sorry fellas, sum is < 20");
         }
     }
 }
