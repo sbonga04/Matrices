@@ -20,7 +20,6 @@ public class MatrixAddition {
                 for(int i = 0;i < array.length ; i ++){
                     //spilt that part of matrix by (,) so we get rows and cols
                     String[] rows = line.split(",");
-
                     //initialise the 2D array now
                     int[][] matrix = new int[rows.length][];
 
@@ -31,9 +30,8 @@ public class MatrixAddition {
                         //continue next time....commit for now
                     String[] arr = rows[r].split(" ");
                     matrix[r] = new int[arr.length];
-                        for(int c = 0 ; c < matrix.length ; i++){
+                        for(int c = 0 ; c < arr.length ; i++)
                             matrix[r][c] = Integer.parseInt(arr[c]);
-                        }
                     }
                 }
 
@@ -42,9 +40,9 @@ public class MatrixAddition {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-    private void matrix_Addition (int[][] A, int[][] B){
-        //try adding matrix A and B here
+    }   private void matrix_Addition (int[][] A, int[][] B){
+            //try adding matrix A and B here
 
     }
+
 }
