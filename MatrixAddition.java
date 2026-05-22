@@ -29,6 +29,11 @@ public class MatrixAddition {
                         //trim is gonna replace spaces
                         rows[r] = rows[r].trim().replace("\\s+"," ");
                         //continue next time....commit for now
+                    String[] arr = rows[r].split(" ");
+                    matrix[r] = new int[arr.length];
+                        for(int c = 0 ; c < matrix.length ; i++){
+                            matrix[r][c] = Integer.parseInt(arr[c]);
+                        }
                     }
                 }
 
@@ -37,5 +42,9 @@ public class MatrixAddition {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    private void matrix_Addition (int[][] A, int[][] B){
+        //try adding matrix A and B here
+
     }
 }
