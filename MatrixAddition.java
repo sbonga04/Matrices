@@ -40,9 +40,12 @@ public class MatrixAddition {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+            //method for adding matric
     }   private void matrix_Addition (int[][] A, int[][] B){
-            //try adding matrix A and B here
-
+            //try adding matrix a and b
+            for (int i= 0; i < A.length; i ++){
+                //this is the for loop block
+            }
     }
 
 }
