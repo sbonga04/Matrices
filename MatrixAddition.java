@@ -45,6 +45,10 @@ public class MatrixAddition {
             //try adding matrix a and b
             for (int i= 0; i < A.length; i ++){
                 //this is the for loop block
+                //this is the new line
+                if (i < 6){
+                    System.out.println("less than 6");
+                }
             }
     }
 
