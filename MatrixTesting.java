@@ -18,7 +18,9 @@ public class MatrixTesting {
 //		}
 		//System.out.print("\nsize of array is :" +A.length);
 	}
-	private void MatrixAddding(int[][] arrayA, int[][] arrayB){
+	private int[][] MatrixAddding(int[][] arrayA, int[][] arrayB){
+		int[][] arrayC = new int[arrayA.length][arrayA.length];
+
 		if (arrayB.length != arrayA.length)
 			System.err.println("Matrices being must be the same size");
 		else if (arrayB.length == arrayA.length){
@@ -29,10 +31,10 @@ public class MatrixTesting {
 		if (arrayB.length == arrayA.length){
 			for(int i = 0; i < arrayA.length ; i ++){
 				for (int j = 0; j < arrayA.length ; j++){
-
+					arrayC[i][j] = arrayA[i][j] + arrayB[i][j];
 				}
 			}
-		}
+		}return arrayC;//test next time, commit for now...
 	}
 	/*Maybe for what i'm tryna do here, i need to be able to add 2 1D arrays
   And still be able to produce a new array with the sum of each index in the arrays*/
