@@ -8,6 +8,7 @@ public class MatrixAdditionExample {
     static void main() {
         //say we got a line of string
         String line = "3 2 5, 4 5 1, 6 3 1; 2 3 1, 3 4 1, 2 1 2";
+        //String[] array = {"3,4,5,2","5,e,r,5","r,w,tr,"," string","mine"};
 
         //splitting matrix itself now to A and B
         String[] arr = line.split(";");

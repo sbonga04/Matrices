@@ -20,7 +20,7 @@ public class MatrixAddition {
                 for(int i = 0;i < array.length ; i ++){
                     //spilt that part of matrix by (,) so we get rows and cols
                     String[] rows = line.split(",");
-                    //initialise the 2D array now
+                    //initialize the 2D array now
                     int[][] matrix = new int[rows.length][];
 
                     for(int r = 0; r< rows.length; r ++){
@@ -40,7 +40,7 @@ public class MatrixAddition {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-            //method for adding matric
+            //method for adding matrices
     }   private void matrix_Addition (int[][] A, int[][] B){
             //try adding matrix a and b
             for (int i= 0; i < A.length; i ++){
