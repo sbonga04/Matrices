@@ -3,19 +3,39 @@ import java.util.Arrays;
 public class MatrixTesting {
 
 	void main() {
-		System.out.println("we're in");
+		System.out.println("we're in" +
+				"\nThis program is going to do the sum of two integer arrays and give the results");
+
 		int[] arr_A = {1,2,3};
 		int[] arr_B = {1,2,4};
-		System.out.println(Arrays.toString(arrayAddition(arr_A,arr_B)));
+
+		System.out.println("Arrays being added are: (A)=" +  Arrays.toString(arr_A) + " + (B)=" + Arrays.toString(arr_B));
+		System.out.println("results = (C)=" +Arrays.toString(arrayAddition(arr_A,arr_B)));
+
 		int[][] A = {{3,4,6},{3,2,2},{1,1,2}};
 		int[][] B = {{1,1,1},{4,3,4},{1,1,1}};
 
+		//System.out.println("\nThis is a 2D Matrix array\n"+Arrays.deepToString(A));
+
+		//took this code from google, A nice format of printing a matrix
+		System.out.println("\nMatrix format" +
+				"\n====A=====");
+		Arrays.stream(A).map(Arrays::toString).
+				forEach(System.out::println);
+
+		System.out.println("\n====B====");
+		Arrays.stream(B).map(Arrays::toString).
+				forEach(System.out::println);
+
+		System.out.println("\nresults:(C)=");
+		Arrays.stream(MatrixAddding(A,B)).map(Arrays::toString)
+				.forEach(System.out::println);
 //		for (int i = 0; i < A.length ; i++){
 //			for (int j = 0; j < A.length;j++ ) {
 //				System.out.print("[" + A[i][j] + "]");
 //			}
 //			System.out.println("");
-//		}
+//		}e
 		//System.out.print("\nsize of array is :" +A.length);
 	}
 	private int[][] MatrixAddding(int[][] arrayA, int[][] arrayB){
@@ -23,12 +43,8 @@ public class MatrixTesting {
 
 		if (arrayB.length != arrayA.length)
 			System.err.println("Matrices being must be the same size");
-		else if (arrayB.length == arrayA.length){
 
-		}else
-			System.err.println("invalid inputs");
-
-		if (arrayB.length == arrayA.length){
+		else if(arrayB.length == arrayA.length){
 			for(int i = 0; i < arrayA.length ; i ++){
 				for (int j = 0; j < arrayA.length ; j++){
 					arrayC[i][j] = arrayA[i][j] + arrayB[i][j];
