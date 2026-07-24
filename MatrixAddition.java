@@ -41,15 +41,20 @@ public class MatrixAddition {
             throw new RuntimeException(e);
         }
             //method for adding matrices
-    }   private void matrix_Addition (int[][] A, int[][] B){
-            //try adding matrix a and b
-            for (int i= 0; i < A.length; i ++){
-                //this is the for loop block
-                //this is the new line
-                if (i < 6){
-                    System.out.println("less than 6");
+    }
+    private int[][] MatrixAddding(int[][] arrayA, int[][] arrayB){
+        int[][] arrayC = new int[arrayA.length][arrayA.length];
+
+        if (arrayB.length != arrayA.length)
+            System.err.println("Matrices being must be the same size");
+
+        else if(arrayB.length == arrayA.length){
+            for(int i = 0; i < arrayA.length ; i ++){
+                for (int j = 0; j < arrayA.length ; j++){
+                    arrayC[i][j] = arrayA[i][j] + arrayB[i][j];
                 }
             }
+        }return arrayC;//test next time, commit for now...
     }
 
 }
