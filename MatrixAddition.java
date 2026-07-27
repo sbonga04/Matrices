@@ -5,42 +5,27 @@ import java.io.IOException;
 
 public class MatrixAddition {
 
-    public static void main() throws FileNotFoundException {
-        //System.out.println("welcome to matrices");
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("mat_add.txt"));
-
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("welcome to matrices");
+        try{
+        BufferedReader reader = new BufferedReader(new FileReader("mat_add.txt"));
             String line;
-            while ((line = reader.readLine()) != null){
+
+            while((line = reader.readLine()) != null){
                 //System.out.println(line);
+                String[] matrix = line.split(";");
 
-                //split matrix by (;)
-                String[] array = line.split(";");
+                for (int i = 0; i < matrix.length ; i++){
 
-                for(int i = 0;i < array.length ; i ++){
-                    //spilt that part of matrix by (,) so we get rows and cols
                     String[] rows = line.split(",");
-                    //initialize the 2D array now
-                    int[][] matrix = new int[rows.length][];
-
-                    for(int r = 0; r< rows.length; r ++){
-                        //now i want to clean the rows
-                        //trim is gonna replace spaces
-                        rows[r] = rows[r].trim().replace("\\s+"," ");
-                        //continue next time....commit for now
-                    String[] arr = rows[r].split(" ");
-                    matrix[r] = new int[arr.length];
-                        for(int c = 0 ; c < arr.length ; i++)
-                            matrix[r][c] = Integer.parseInt(arr[c]);
-                    }
+                    // now this is where I need a short demo
                 }
-
             }
+
             reader.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-            //method for adding matrices
     }
     private int[][] MatrixAddding(int[][] arrayA, int[][] arrayB){
         int[][] arrayC = new int[arrayA.length][arrayA.length];

@@ -1,10 +1,15 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MatrixTesting {
 
 	void main() {
 		System.out.println("we're in" +
 				"\nThis program is going to do the sum of two integer arrays and give the results");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("What is your name: ");
+		String s= scan.nextLine();
+		System.out.println("Good Morning " + s);
 
 		int[] arr_A = {1,2,3};
 		int[] arr_B = {1,2,4};
