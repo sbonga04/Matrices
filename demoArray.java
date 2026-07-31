@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class demoArray{
     public static void main() throws FileNotFoundException {
@@ -14,7 +15,20 @@ public class demoArray{
             BufferedReader reader = new BufferedReader(new FileReader("demo_Array"));
             String line;
 
-            while ((line = reader.readLine() != null) //i am completely iritated right now...need a breather
+            while ( (line =  reader.readLine()) != null){
+               //spliting the line
+               String[] list1 = line.toString().split(";");
+               System.out.println(Arrays.toString(list1));
+
+
+               for(int i = 0; i < list1.length; i ++) {
+                   String[] list = list1.toString().split(",");
+
+
+               }
+
+            }
+            reader.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
