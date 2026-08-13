@@ -18,15 +18,18 @@ public class demoArray{
             while ( (line =  reader.readLine()) != null){
                //spliting the line
                String[] list1 = line.toString().split(";");
+
+               String[] arr1 = list1[0].split(",");
+               String[] arr2 = list1[1].split(",");
                System.out.println(Arrays.toString(list1));
 
+               int sum[] = new int[arr1.length];
+                for(int i = 0; i < arr1.length; i++){
+                    sum[i] = Integer.parseInt(arr1[i]) +
+                            Integer.parseInt(arr2[i]);
+                }
 
-               for(int i = 0; i < list1.length; i ++) {
-                   String[] list = list1.toString().split(",");
-
-
-               }
-
+                System.out.println(Arrays.toString(sum));
             }
             reader.close();
         } catch (IOException e) {
